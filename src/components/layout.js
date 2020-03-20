@@ -4,8 +4,7 @@ import PropTypes from 'prop-types';
 import { Global, css } from '@emotion/core';
 import globalStyles from '../styles/global';
 import Header from './header/header';
-import 'Footer'import Footer from './footer/footer';
- from './footer/footer';
+import Footer from './footer/footer';
 
 
 const main = css`
