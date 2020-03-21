@@ -17,7 +17,7 @@ const box = css`
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    align-items flex-start;
+    align-items: flex-start;
 `
 
 const intro = css`
