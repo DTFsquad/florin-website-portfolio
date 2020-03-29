@@ -1,6 +1,6 @@
 import { css } from '@emotion/core';
-import colors from './colors';
-import fonts from './typography';
+import theme from './theme';
+const { colors, fonts } = theme;
 
 export default css`
     /* Box sizing rules */
@@ -80,18 +80,23 @@ export default css`
 
     /* Custom styles begins here: */
     body {
-        background-color: ${colors.secondary};
+        background-color: ${colors.maastrichtBlue};
         color: ${colors.white};
     }
 
     h1,
     h2,
     h3,
-    h4 {
-        font-family: ${fonts.fontPrimary};
+    h4,
+    h5,
+    h6 {
+        font-family: ${fonts.primary};
+        font-weight: normal;
     }
 
     p {
-        font-family: ${fonts.fontText};
+        font-family: ${fonts.secondary};
+        font-weight: normal;
+        font-size: 2rem;
     }
-`
+`;
