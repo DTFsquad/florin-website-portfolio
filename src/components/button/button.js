@@ -23,7 +23,7 @@ const button = css`
     }
 `;
 
-const Button = ({ type, children, ...otherProps}) => {
+const Button = ({ children, ...otherProps}) => {
     return (
         <button css={button} {...otherProps}>
             {children}

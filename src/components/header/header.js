@@ -1,7 +1,16 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { css } from '@emotion/core';
 import { theme } from '../../styles';
-const { navHeight, fonts, colors, flexCenter, heroAnimationDuration } = theme;
+
+const {
+    navHeight,
+    fonts,
+    colors,
+    flexCenter,
+    initialAnimationDuration,
+    delay
+} = theme;
 
 const headerStyle = css`
     width: 100%;
@@ -27,6 +36,30 @@ const nav = css`
 
 const figure = css`
     ${flexCenter}
+`;
+
+const logoContainer = css`
+    ${flexCenter}
+    margin-left: 3.5rem;
+    width: 46px;
+    height: 46px;
+    border-radius: 4px;
+    border: 1px solid;
+    ${colors.brightYellow};
+
+    &:hover {
+        background-color: ${colors.brightYellowTransparent};
+    }
+`;
+
+const logo = css`
+    padding: 1rem;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    color: ${colors.brightYellow};
+    font-size: 1.8rem;
+    font-family: ${fonts.secondary};
 `;
 
 const ul = css`
@@ -83,12 +116,18 @@ const Header = () => {
     <header css={headerStyle}>
         <nav css={nav}>
             <figure css={figure}>
-                <div>logo</div>
+                <div css={logoContainer}>
+                    <Link to='#' aria-label='home' css={logo}>
+                        FD
+                    </Link>
+                </div>
             </figure>
             <ul css={ul}>
                 <li
                 data-aos='fade-down'
-                data-aos-duration={heroAnimationDuration - 300}
+                data-aos-easing='ease-in-cubic'
+                data-aos-delay={delay(800)}
+                data-aos-duration={initialAnimationDuration}
                 >
                     <a href='#about'>
                         <span>0.</span> About
@@ -96,7 +135,9 @@ const Header = () => {
                 </li>
                 <li
                     data-aos='fade-down'
-                    data-aos-duration={heroAnimationDuration - 200}
+                    data-aos-easing='ease-in-cubic'
+                    data-aos-delay={delay(1000)}
+                    data-aos-duration={initialAnimationDuration}
                 >
                     <a href='#work'>
                         <span>1.</span> Work
@@ -104,7 +145,9 @@ const Header = () => {
                 </li>
                 <li
                     data-aos='fade-down'
-                    data-aos-duration={heroAnimationDuration - 100}
+                    data-aos-easing='ease-in-cubic'
+                    data-aos-delay={delay(1200)}
+                    data-aos-duration={initialAnimationDuration}
                 >
                     <a href='#contact'>
                         <span>2.</span> Contact
@@ -112,7 +155,9 @@ const Header = () => {
                 </li>
                 <li
                     data-aos='fade-left'
-                    data-aos-duration={heroAnimationDuration}
+                    data-aos-easing='ease-in-cubic'
+                    data-aos-delay={delay(1400)}
+                    data-aos-duration={initialAnimationDuration}
                 >
                     <a href='resume'>
                         Resume
