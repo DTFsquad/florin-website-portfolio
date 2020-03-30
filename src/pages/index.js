@@ -5,6 +5,8 @@ import SEO from '../components/seo';
 import Hero from '../components/hero/hero';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import About from '../components/about/about';
+import Contact from '../components/contact/contact';
 
 // if in dev mode
 if (process.env.NODE_ENV === 'development') {
@@ -21,6 +23,8 @@ const IndexPage = () => {
     <Layout>
       <SEO />
       <Hero />
+      <About />
+      <Contact />
     </Layout>
   );
 };
