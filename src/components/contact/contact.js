@@ -2,6 +2,7 @@ import React from 'react';
 import { css } from '@emotion/core';
 import { theme } from '../../styles';
 import Button from '../button/button';
+import LinkButton from '../linkButton/linkButton';
 
 const { fonts, colors } = theme;
 
@@ -37,11 +38,9 @@ const Contact = () => {
              I am always happy to consider new ideas or collaborations.
              Even just to have a chat about a new technology!
              </p>
-             <Button>
-                 <a href='mailto:dumitruflorin19@yahoo.com'>
+             <LinkButton href='mailto:dumitruflorin19@yahoo.com?subject=Get%20in%20Touch%20florin-dumitru.co.uk'>
                     Contact me
-                 </a>
-             </Button>
+             </LinkButton>
         </section>
     );
 };
