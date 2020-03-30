@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { css } from '@emotion/core';
 import Button from '../button/button';
 import { theme } from '../../styles';
 const { colors, fonts, navHeight, initialAnimationDuration, delay } = theme;
 
 const section = css`
-    height: calc(100vh - ${navHeight});
+    height: 100vh;
     font-size: 3.5rem;
     display: flex;
     flex-flow: column nowrap;
@@ -77,14 +78,14 @@ const Hero = () => {
                     data-aos-delay={delay()}
                     data-aos-duration={initialAnimationDuration}
                     >
-                    I am a Front End Developer based in London, UK who loves to build web appplications.
+                    I am a Front End Engineer based in London, UK who loves to build web appplications.
                 </p>
                 <Button
                     data-aos='fade-up'
                     data-aos-easing='ease-in-cubic'
                     data-aos-delay={delay(200)}
                     data-aos-duration={initialAnimationDuration}>
-                    Contact me
+                    <Link to='#contact'>Contact me</Link>
                 </Button>
             </div>
         </section>

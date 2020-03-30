@@ -8,6 +8,10 @@ export default css`
         font-size: 62.5%;
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     *, *::before, *::after {
         box-sizing: border-box;
     }
@@ -45,6 +49,12 @@ export default css`
     }
 
     /* A elements that dont have a class get default styles */
+    a,
+    a:visited,
+    a:link {
+        text-decoration: none;
+    }
+    
     a:not([class]) {
         text-decoration-skip-ink: auto;
     }
