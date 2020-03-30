@@ -1,7 +1,7 @@
 module.exports = {
-    title: `Florin Dumitru | FrontEnd Developer`,
+    title: `Florin Dumitru | FrontEnd Engineer`,
     siteUrl: 'https://www.florin-dumitru.co.uk',
-    description: `I am a highly motivated Front End Developer based in London, United Kingdom, passionate about creating rich user interfaces and interactive web applications using a wide range of JavaScript technologies and libraries.
+    description: `I am a highly motivated Front End Engineer based in London, United Kingdom, passionate about creating rich user interfaces and interactive web applications using a wide range of JavaScript technologies and libraries.
     I strongly believe in the importance of writing clean, modular and loosely coupled code that is easy to document, maintain and reuse.
     I have experience working with HTML, CSS, JavaScript, React, TypeScript, GraphQL, MongoDB, Nuxt, Jest, Webpack, Node, Express.`,
     keywords: `Florin Dumitru, github, DTFsquad,`,
@@ -25,4 +25,4 @@ module.exports = {
             url: 'https://twitter.com/flololo'
         }
     ]
-}
+};
