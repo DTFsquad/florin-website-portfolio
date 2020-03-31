@@ -32,7 +32,7 @@ const title = css`
 const skillContainer = css`
   width: 100%;
   display: grid;
-  grid-template-columns: 70px 1fr;
+  grid-template-columns: 55px 1fr;
   grid-template-rows: repeat(7, 70px);
   grid-gap: 2rem;
   align-items: center;
@@ -46,7 +46,7 @@ const skillContainer = css`
 const Skills = () => {
   return (
     <section css={section}>
-      <h4 css={title}>Tech Skills</h4>
+      {/* <h4 css={title}>Tech Skills</h4> */}
       <div css={skillContainer}>
         <JSIcon
           css={css`
