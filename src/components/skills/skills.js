@@ -53,43 +53,43 @@ const Skills = () => {
             width: 44px;
           `}
         />
-        <ProgressBar width={40} name="JavaScript" />
+        <ProgressBar width={40} description="JavaScript ES6+" />
         <ReactIcon
           css={css`
             width: 50px;
           `}
         />
-        <ProgressBar width={35} name="React" />
+        <ProgressBar width={35} description="React | Hooks| Context API" />
         <ReduxIcon
           css={css`
             width: 40px;
           `}
         />
-        <ProgressBar width={25} name="Redux" />
+        <ProgressBar width={25} description="Redux" />
         <GraphQLIcon
           css={css`
             width: 41px;
           `}
         />
-        <ProgressBar width={25} name="GraphQL" />
+        <ProgressBar width={25} description="GraphQL" />
         <ApolloIcon
           css={css`
             /* width: 40px; */
           `}
         />
-        <ProgressBar width={20} name="Apollo" />
+        <ProgressBar width={20} description="Apollo Client" />
         <NodeIcon
           css={css`
             width: 55px;
           `}
         />
-        <ProgressBar width={25} name="Node" />
+        <ProgressBar width={25} description="Node | Express.js" />
         <SASSIcon
           css={css`
             width: 48px;
           `}
         />
-        <ProgressBar width={25} name="SASS / SCSS Modules" />
+        <ProgressBar width={25} description="CSS Grid | Flexbox | SASS" />
       </div>
     </section>
   );
