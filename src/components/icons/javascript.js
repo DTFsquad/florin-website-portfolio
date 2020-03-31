@@ -1,11 +1,12 @@
 import React from "react";
 
-export default () => (
+export const JSIcon = props => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 48 48"
     width="48px"
     height="48px"
+    {...props}
   >
     <title>JavaScript</title>
     <path fill="#ffd600" d="M6,42V6h36v36H6z" />
@@ -15,3 +16,5 @@ export default () => (
     />
   </svg>
 );
+
+export default JSIcon;
