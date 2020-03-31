@@ -89,7 +89,7 @@ const Hero = () => {
                     I am a Front End Engineer based in London, UK who loves to build web appplications.
                 </p>
                 <LinkButton
-                    to='#contact'
+                    href='#contact'
                     data-aos='fade-up'
                     data-aos-easing='ease-in-cubic'
                     data-aos-delay={delay(200)}
