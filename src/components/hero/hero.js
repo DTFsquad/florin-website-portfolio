@@ -1,7 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { css } from '@emotion/core';
-import Button from '../button/button';
 import { theme } from '../../styles';
 import LinkButton from '../linkButton/linkButton';
 
@@ -12,8 +10,8 @@ const section = css`
     font-size: 3.5rem;
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
-    margin: 0 5rem;
+    align-items: flex-start;
+    padding: 0 5rem;
 `;
 
 const box = css`

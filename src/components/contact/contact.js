@@ -16,7 +16,7 @@ const section = css`
 `;
 
 const header = css`
-    font-family: ${fonts.secondary};
+    font-family: ${fonts.primary};
     font-weight: normal;
     letter-spacing: 1rem;
     font-size: 5rem;
@@ -33,7 +33,7 @@ const subText = css`
 const Contact = () => {
     return (
         <section css={section} id='contact'>
-            <h4 css={header}>Get in touch!</h4>
+            <h4 css={header}>Get in touch</h4>
             <p css={subText}>I am available to any freelance work at the moment.
              I am always happy to consider new ideas or collaborations.
              Even just to have a chat about a new technology!
