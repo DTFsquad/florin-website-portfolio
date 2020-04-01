@@ -38,10 +38,17 @@ const skillContainer = css`
   grid-template-rows: repeat(7, 70px);
   grid-gap: 2rem;
   align-items: center;
+  justify-items: center;
+
+  /* All icon logo are svg */
   & > svg {
     height: auto;
     grid-column: 1/2;
-    justify-self: flex-end;
+  }
+
+  /* All progress bar are divs */
+  & > div {
+    justify-self: flex-start;
   }
 `;
 
