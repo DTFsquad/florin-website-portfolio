@@ -1,11 +1,10 @@
 import React from 'react';
-import { css } from '@emotion/core';
-// import { Link } from 'gatsby';
+import styled from '@emotion/styled';
 import { theme } from '../../styles';
 
 const { colors, fonts } = theme;
 
-const button = css`
+const Link = styled.a`
     color: ${colors.brightYellow};
     background-color: transparent;
     border: 1px solid ${colors.brightYellow};
@@ -28,9 +27,9 @@ const button = css`
 
 const LinkButton = ({ children, ...props }) => {
     return (
-        <a css={button} {...props}>
+        <Link {...props}>
             {children}
-        </a>
+        </Link>
     );
 };
 
