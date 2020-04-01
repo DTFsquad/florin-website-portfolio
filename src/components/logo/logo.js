@@ -8,6 +8,7 @@ const { flexCenter, colors, fonts } = theme;
 
 const Figure = styled.figure`
   ${flexCenter}
+  margin-left: 3.5rem;
 `;
 
 const LogoContainer = styled.div`
@@ -32,9 +33,13 @@ const logo = css`
   font-family: ${fonts.secondary};
 `;
 
-export const Logo = () => {
+export const Logo = props => {
   return (
-    <Figure>
+    <Figure
+      ref={props.logoRef}
+      id='logo'
+      {...props}
+      >
       <LogoContainer>
         <Link to="#" aria-label="home" css={logo}>
           DF

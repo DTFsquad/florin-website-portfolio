@@ -89,7 +89,11 @@ const Header = () => {
     return (
     <header css={header}>
         <nav css={nav}>
-                <Logo />
+                <Logo
+                    data-aos='zoom-in'
+                    data-aos-duration='500'
+                    data-aos-delay='200'
+                />
             <ul css={ul}>
                 <li
                 data-aos='fade-down'

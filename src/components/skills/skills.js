@@ -59,7 +59,7 @@ const Skills = () => {
             width: 50px;
           `}
         />
-        <ProgressBar width={35} description="React | Hooks| Context API" />
+        <ProgressBar width={35} description="React | Hooks | Context API" />
         <ReduxIcon
           css={css`
             width: 40px;
