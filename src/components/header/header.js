@@ -41,6 +41,18 @@ const nav = css`
     justify-content: space-between;
     align-items: center;
     flex-flow: row nowrap;
+
+    &:first-child {
+        margin-left: 3.5rem;
+
+        @media screen and (max-width: 720px) {
+            margin-left: 2rem;
+        }
+
+        @media screen and (max-width: 600px) {
+            margin-left: 1rem;
+        }
+    }
 `;
 
 const ul = css`
@@ -99,7 +111,7 @@ const ul = css`
      @media screen and (max-width: 720px) {
         ${flexCenter}
         flex-flow: column nowrap;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-around;
 
         li {
@@ -110,26 +122,31 @@ const ul = css`
             a {
                 text-decoration: none;
                 display: block;
-                color: ${colors.greyBlue};
+                color: ${colors.maastrichtBlue};
                 padding: 0.5rem 0;
                 border-bottom: 1.5rem solid transparent;
+                font-family: ${fonts.primary};
+                font-size: 1.6rem;
+                text-transform: uppercase;
 
                 &:hover,
                 &:focus,
                 &:active {
-                    color: ${colors.brightYellow};
-                    border-bottom: 1.5px solid ${colors.brightYellow};
+                    color: ${colors.white};
+                    border-bottom: 1.5px solid ${colors.white};
                 }
 
                 span {
-                    color: ${colors.brightYellow};
+                    color: ${colors.white};
                 }
             }
         }
 
+        /* Resume butoon */
+
         li:last-child {
             a {
-                border: 1px solid ${colors.brightYellow};
+                border: 1px solid ${colors.maastrichtBlue};
                 padding: 2rem;
                 color: ${colors.brightYellow};
                 border-radius: 3px;
@@ -137,7 +154,7 @@ const ul = css`
                 &:hover,
                 &:active,
                 &:focus {
-                    background-color: ${colors.brightYellowTransparent};
+                    background-color: ${colors.maastrichtBlueTransparent};
                 }
             }
         }
@@ -145,34 +162,55 @@ const ul = css`
 `;
 
 const Sidebar = styled.aside`
+    display: none;
+
+   @media screen and (max-width: 720px) {
+    display: block;
     position: fixed;
     top: 0;
+    left: -999px;
     height: 100vh;
-    width: 50vw;
+    width: 65vw;
     background: ${colors.greyBlue};
-    transition: all 300ms ease-out;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+   }
 
     &.slide-enter {
         left: -999px;
     }
-
     &.slide-enter-done {
         left: 0;
     }
 
     &.slide-exit {
-        left: 0;
+        left: -999px;
     }
 
     &.slide-exit-done {
         left: -999px;
     }
-`
+`;
+
+const BackDrop = styled.div`
+    background: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+`;
 
 const Header = () => {
     const [sideDrawerOpen, setSideDrawerOpen] = useState(false);
 
     const onHamburgerClick = () => setSideDrawerOpen(previousValue => !previousValue);
+
+    const closeSideBar = () => setSideDrawerOpen(false);
 
     return (
     <header css={header}>
@@ -230,24 +268,22 @@ const Header = () => {
         <CSSTransition
                 in={sideDrawerOpen}
                 classNames='slide'
-                timeout={300}
-                unmountOnExit
-                mountOnEnter
+                timeout={250}
         >
             <Sidebar>
                 <ul css={responsiveList}>
                     <li>
-                        <a href='#about'>
+                        <a href='#about' oncClick={closeSideBar}>
                             <span>0.</span> About
                         </a>
                     </li>
                     <li>
-                        <a href='#work'>
+                        <a href='#work' onClick={closeSideBar}>
                             <span>1.</span> Work
                         </a>
                     </li>
                     <li>
-                        <a href='#contact'>
+                        <a href='#contact' onClick={closeSideBar}>
                             {' '}
                             Contact
                             <span>2.</span>
@@ -259,6 +295,14 @@ const Header = () => {
                 </ul>
             </Sidebar>
         </CSSTransition>
+        {sideDrawerOpen && (
+            <BackDrop
+                onClick={closeSideBar}
+                tabIndex='-1'
+                aria-hidden='true'
+                role='presentation'
+            />
+        )}
     </header>
     );
 };

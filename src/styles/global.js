@@ -91,6 +91,11 @@ export default css`
     }
 
     /* Custom styles begins here: */
+
+    ::selection {
+        background-color: ${colors.brightYellow};
+    }
+
     body {
         background-color: ${colors.maastrichtBlue};
         color: ${colors.white};
