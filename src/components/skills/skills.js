@@ -54,12 +54,12 @@ const Skills = () => {
           width='44px'
           height='auto'
         />
-        <ProgressBar level={40} description='JavaScript ES6+' />
+        <ProgressBar level={60} description='JavaScript ES6+' />
         <ReactIcon
           width='50px'
           height='auto'
         />
-        <ProgressBar level={35} description='React | Hooks | Context API' />
+        <ProgressBar level={65} description='React | Hooks | Context API' />
         <ReduxIcon
           width='40px'
           height='auto'
@@ -71,19 +71,19 @@ const Skills = () => {
         />
         <ProgressBar level={25} description='GraphQL' />
         <ApolloIcon />
-        <ProgressBar level={20} description='Apollo Client' />
+        <ProgressBar level={40} description='Apollo Client' />
         <NodeIcon
           width='55px'
           height='auto'
         />
-        <ProgressBar level={25} description='Node | Express.js' />
+        <ProgressBar level={45} description='Node | Express.js' />
         <CSSIcon
           width='44px'
           height='auto'
         />
-        <ProgressBar level={95} description='CSS3 Grid | SCSS | CSS-in-JS '/>
+        <ProgressBar level={45} description='CSS3 Grid | SCSS | CSS-in-JS '/>
         <GatsbyIcon />
-        <ProgressBar level={25} description='Gatsby.js' />
+        <ProgressBar level={55} description='Gatsby.js' />
       </div>
     </section>
   );
