@@ -9,6 +9,8 @@ import ApolloIcon from "../icons/apollo";
 import NodeIcon from "../icons/node";
 import SASSIcon from "../icons/sass";
 import ProgressBar from "../progressBar/progressBar";
+import GatsbyIcon from '../icons/gatsby';
+import CSSIcon from '../icons/css3';
 
 const { colors, fonts } = themes;
 
@@ -49,47 +51,39 @@ const Skills = () => {
       {/* <h4 css={title}>Tech Skills</h4> */}
       <div css={skillContainer}>
         <JSIcon
-          css={css`
-            width: 44px;
-          `}
+          width='44px'
+          height='auto'
         />
-        <ProgressBar width={40} description="JavaScript ES6+" />
+        <ProgressBar level={40} description='JavaScript ES6+' />
         <ReactIcon
-          css={css`
-            width: 50px;
-          `}
+          width='50px'
+          height='auto'
         />
-        <ProgressBar width={35} description="React | Hooks | Context API" />
+        <ProgressBar level={35} description='React | Hooks | Context API' />
         <ReduxIcon
-          css={css`
-            width: 40px;
-          `}
+          width='40px'
+          height='auto'
         />
-        <ProgressBar width={25} description="Redux" />
+        <ProgressBar level={25} description='Redux' />
         <GraphQLIcon
-          css={css`
-            width: 41px;
-          `}
+          width='41px'
+          height='auto'
         />
-        <ProgressBar width={25} description="GraphQL" />
-        <ApolloIcon
-          css={css`
-            /* width: 40px; */
-          `}
-        />
-        <ProgressBar width={20} description="Apollo Client" />
+        <ProgressBar level={25} description='GraphQL' />
+        <ApolloIcon />
+        <ProgressBar level={20} description='Apollo Client' />
         <NodeIcon
-          css={css`
-            width: 55px;
-          `}
+          width='55px'
+          height='auto'
         />
-        <ProgressBar width={25} description="Node | Express.js" />
-        <SASSIcon
-          css={css`
-            width: 48px;
-          `}
+        <ProgressBar level={25} description='Node | Express.js' />
+        <CSSIcon
+          width='44px'
+          height='auto'
         />
-        <ProgressBar width={25} description="CSS Grid | Flexbox | SASS" />
+        <ProgressBar level={95} description='CSS3 Grid | SCSS | CSS-in-JS '/>
+        <GatsbyIcon />
+        <ProgressBar level={25} description='Gatsby.js' />
       </div>
     </section>
   );
