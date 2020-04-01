@@ -154,14 +154,14 @@ const About = () => {
           <IntroButton
             onClick={() => setActiveText("intro")}
             activeText={activeText}
-            data-aos='fade-right'
+
           >
             Intro
           </IntroButton>
           <MoreButton
             onClick={() => setActiveText("journey")}
             activeText={activeText}
-            data-aos='fade-right'
+            
           >
             Journey
           </MoreButton>
