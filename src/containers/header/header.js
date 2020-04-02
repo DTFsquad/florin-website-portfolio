@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-// import { Link } from 'gatsby';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { CSSTransition } from 'react-transition-group';
-import { theme } from '../../styles';
-import Logo from '../logo/logo';
-import Hamburger from '../hamburger/hamburger';
+import { theme } from '~/styles';
+import Logo from '~components/logo/logo';
+import Hamburger from '~components/hamburger/hamburger';
 
 const {
     navHeight,

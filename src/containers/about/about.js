@@ -1,8 +1,8 @@
 import React from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-import { theme } from '../../styles';
-import profilePic from '../../images/Florin_profil.jpg';
+import { theme } from '~/styles';
+import profilePic from '~/images/Florin_profil.jpg';
 
 const { colors, fonts } = theme;
 
