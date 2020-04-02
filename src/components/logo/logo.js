@@ -6,7 +6,7 @@ import { theme } from "~styles";
 
 const { flexCenter, colors, fonts } = theme;
 
-const Figure = styled.figure`
+const LogoBox = styled.div`
   ${flexCenter}
 `;
 
@@ -34,7 +34,7 @@ const logo = css`
 
 export const Logo = props => {
   return (
-    <Figure
+    <LogoBox
       ref={props.logoRef}
       id='logo'
       {...props}
@@ -44,7 +44,7 @@ export const Logo = props => {
           DF
         </Link>
       </LogoContainer>
-    </Figure>
+    </LogoBox>
   );
 };
 
