@@ -161,37 +161,36 @@ const ul = css`
 `;
 
 const Sidebar = styled.aside`
-    display: none;
-
-   @media screen and (max-width: 720px) {
     display: block;
     position: fixed;
     top: 0;
-    left: -999px;
-    height: 100vh;
-    width: 65vw;
-    background: ${colors.greyBlue};
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-   }
+
+   right: -999px;
+   height: 100vh;
+   width: 65vw;
+   background: ${colors.greyBlue};
+   display: flex;
+   flex-flow: column nowrap;
+   justify-content: center;
+   align-items: center;
+   z-index: 999;
+   transition-duration: 450ms;
 
     &.slide-enter {
-        left: -999px;
+        right: -999px;
     }
     &.slide-enter-done {
-        left: 0;
+        right: 0;
     }
 
     &.slide-exit {
-        left: -999px;
+        right: -999px;
     }
 
     &.slide-exit-done {
-        left: -999px;
+        right: -999px;
     }
+}
 `;
 
 const BackDrop = styled.div`
@@ -267,7 +266,8 @@ const Header = () => {
         <CSSTransition
                 in={sideDrawerOpen}
                 classNames='slide'
-                timeout={250}
+                unmountOnExit
+                mountOnEnter
         >
             <Sidebar>
                 <ul css={responsiveList}>
