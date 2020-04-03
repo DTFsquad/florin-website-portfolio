@@ -7,12 +7,12 @@ import profilePic from 'images/Florin_profil.jpg';
 const { colors, fonts } = theme;
 
 const Section =styled.section`
-    height: 100vh;
     width: 100vw;
     padding: 0 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10rem;
 
     @media screen and (max-width: 900px) {
       display: block;
@@ -43,18 +43,19 @@ const Title = styled.h3`
   font-family: ${fonts.primary};
   font-size: 5rem;
   font-weight: normal;
+  letter-spacing: 0.8rem;
   margin-bottom: 2.5rem;
   grid-row: 1/2;
   justify-self: center;
 
   @media screen and (max-width: 600px) {
     margin-bottom: 2rem;
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 
   @media screen and (max-width: 600px) {
     margin-bottom: 2rem;
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 `;
 
@@ -73,6 +74,12 @@ const AboutGrid = styled.article`
     grid-row: 2/3;
     order: 2;
   }
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: min-content 1fr;
+    justify-content: center;
+  }
 `;
 
 const Text = styled.p`
@@ -83,6 +90,11 @@ const Text = styled.p`
   grid-column: 2/3;
   grid-row: 1/4;
   align-self: flex-start;
+
+  @media screen and (max-width: 600px) {
+    grid-column: 1/4;
+    grid-row: 2/3;
+  }
 `;
 
 const HighLight = styled.span`
@@ -187,6 +199,11 @@ const IntroButton = styled.button`
   border-bottom: 2px solid
     ${props =>
       props.activeText === "intro" ? colors.brightYellow : "transparent"};
+
+  @media screen and (max-width: 600px) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
 `;
 
 const JourneyButton = styled.button`
@@ -196,6 +213,11 @@ const JourneyButton = styled.button`
   border-bottom: 2px solid
     ${props =>
       props.activeText === "journey" ? colors.brightYellow : "transparent"};
+
+  @media screen and (max-width: 600px) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
 `;
 
 const PresentButton = styled.button`
@@ -208,6 +230,11 @@ const PresentButton = styled.button`
           colors.brightYellow :
           'transparent'
         };
+
+  @media screen and (max-width: 600px) {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
 `;
 
 const About = () => {
