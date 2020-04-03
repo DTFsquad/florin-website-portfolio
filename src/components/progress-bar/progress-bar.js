@@ -14,6 +14,15 @@ const ProgressBarFrame = styled.div`
     &::after {
         content: '${props => props.description}';
         display: block;
+        font-family: ${fonts.secondary};
+        font-size: 1.6rem;
+        color: ${colors.white};
+        height: 100%;
+        letter-spacing: 0.3rem;
+
+        @media screen and (max-width: 900px) {
+            font-size: 1.4rem;
+        }
     }
 
 
