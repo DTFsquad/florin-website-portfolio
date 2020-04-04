@@ -1,11 +1,11 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Layout from "./components/layout";
-import SEO from "./components/seo";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 import Hero from "../containers/hero/hero";
-import About from "./containers/about/about";
-import Contact from "./containers/contact/contact";
-import Skills from "./components/skills/skills";
+import About from "../containers/about/about";
+import Contact from "../containers/contact/contact";
+import Skills from "../components/skills/skills";
 
 const IndexPage = () => {
   return (

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { css } from '@emotion/core';
-import { theme } from './styles';
-import LinkButton from 'components/linkButton/linkButton';
+import { theme } from '../../styles/theme';
+import LinkButton from '../../components/link-button/link-button';
 
 const { colors, fonts, initialAnimationDuration, delay } = theme;
 

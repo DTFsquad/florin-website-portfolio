@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from 'react-dom';
 import 'aos/dist/aos.css';
-import PropTypes, { object } from "prop-types";
+import PropTypes from "prop-types";
 import styled from "@emotion/styled";
-import Footer from "./components/footer/footer";
-import LoadingIntro from "./components/loading-intro/loading-intro";
-import Header from "./containers/header/header";
+import Footer from "../components/footer/footer";
+import LoadingIntro from "..//components/loading-intro/loading-intro";
+import Header from "../containers/header/header";
 import { Global } from "@emotion/core";
 import { globalStyles } from "../styles";
 
 // if in dev mode
 if (process.env.NODE_ENV === 'development') {
   // Set react-axe to catch accessibility issues in dev mode
-  const axe - require('react-axe');
+  const axe = require('react-axe');
   axe(React, ReactDOM, 1000);
 }
 

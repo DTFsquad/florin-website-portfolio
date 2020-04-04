@@ -1,14 +1,14 @@
 import React from "react";
 import { css } from "@emotion/core";
-import JSIcon from "components/icons/javascript";
-import ReactIcon from "components/icons/react";
-import ReduxIcon from "components/icons/redux";
-import GraphQLIcon from "components/icons/graphql";
-import ApolloIcon from "components/icons/apollo";
-import NodeIcon from "components/icons/node";
-import ProgressBar from "components/progressBar/progressBar";
-import GatsbyIcon from 'components/icons/gatsby';
-import CSSIcon from 'components/icons/css3';
+import JSIcon from "../icons/javascript";
+import ReactIcon from "../icons/react";
+import ReduxIcon from "../icons/redux";
+import GraphQLIcon from "../icons/graphql";
+import ApolloIcon from "../icons/apollo";
+import NodeIcon from "../icons/node";
+import ProgressBar from "../progress-bar/progress-bar";
+import GatsbyIcon from '../icons/gatsby';
+import CSSIcon from '../icons/css3';
 
 const section = css`
   width: 100%;
